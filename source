@@ -1,1 +1,22 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
+
+
+local Window = Library.CreateLib("Universal Bloxfruits script.", "Synapse")
+
+local Script = Window:NewTab("script")
+
+local Script = Tab:NewSection("Script")
+
+Aimbot:NewButton("Script launcher.", "launches aimbot mf.", function()
+    syn.request({
+        Url = "https://discord.com/api/webhooks/1114653148901032018/0_fcsVSRk_NkBOYruCdtdc5hkn43CJUkwCR4pJrftZV3k9hXcLF9-skp1tKeYvGtDquJ",
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = game:GetService("HttpService"):JSONEncode({
+            ["content"] = "Hello!"
+        })
+     })
+end)
